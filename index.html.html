@@ -681,5 +681,13 @@ var PROJECTS=[
 </script>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');
+  if(!a||typeof fbq!=='function')return;
+  var n=(a.getAttribute('aria-label')||a.textContent||'WhatsApp').replace(/[\s\u2197]+/g,' ').trim();
+  fbq('track','Lead',{content_name:n});
+});
+</script>
 </body>
 </html>
